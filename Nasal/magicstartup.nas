@@ -1,5 +1,5 @@
 # Temporary until proper systems are available
-# Joshua Davidson (it0uchpods)
+# Josh Davidson (Octal450)
 # ;)
 
 var doMagicStartup = func {

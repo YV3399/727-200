@@ -1,6 +1,6 @@
 # 727 Block V Autopilot/Flight Director
 # IT-AUTOFLIGHT Based
-# (c) Joshua Davidson (it0uchpods)
+# (c) Josh Davidson (Octal450)
 
 var locdefl = 0;
 var locdefl_b = 0;

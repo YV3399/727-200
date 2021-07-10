@@ -1,5 +1,5 @@
 # B727 Main Libraries
-# Joshua Davidson (it0uchpods)
+# Josh Davidson (Octal450)
 
 #######################
 # Various Other Stuff #
