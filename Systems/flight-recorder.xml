@@ -49,18 +49,6 @@
 				<property>/fdm/jsbsim/fcs/slat-pos-norm</property>
 			</signal>
 			<signal>
-				<type>double</type>
-				<property>/engines/engine/thrust_lb</property>
-			</signal>
-			<signal>
-				<type>double</type>
-				<property>/engines/engine[1]/thrust_lb</property>
-			</signal>
-			<signal>
-				<type>double</type>
-				<property>/engines/engine[2]/thrust_lb</property>
-			</signal>
-			<signal>
 				<type>float</type>
 				<property>/engines/engine[0]/n1-actual</property>
 			</signal>

@@ -584,22 +584,38 @@
 			</test>
 		</switch>
 		
-		<fcs_function name="hydraulics/tiller/function">
+		<fcs_function name="hydraulics/tiller/rudder-cmd-deg">
 			<function>
 				<table>
 					<independentVar lookup="row">/velocities/groundspeed-kt</independentVar>
 					<independentVar lookup="column">hydraulics/tiller/switch</independentVar>
 					<tableData>
-						       -1     0  1
-						30.000 -70.0  0  70.0
-						30.001 -10.0  0  10.0
+						    -1  0  1
+						 0   0  0   0
+						 1 -70  0  70
+						45 -10  0  10
 					</tableData>
 				</table>
 			</function>
 		</fcs_function>
 		
+		<pure_gain name="hydraulics/tiller/autopush-cmd-deg">
+			<input>hydraulics/tiller/autopush-cmd</input>
+			<gain>70</gain>
+		</pure_gain>
+		
+		<switch name="hydraulics/tiller/cmd-deg">
+			<default value="hydraulics/tiller/rudder-cmd-deg"/>
+			<test value="0">
+				/gear/gear[0]/wow ne 1
+			</test>
+			<test value="hydraulics/tiller/autopush-cmd-deg">
+				/sim/model/autopush/connected eq 1
+			</test>
+		</switch>
+		
 		<actuator name="fcs/steer-deg">
-			<input>hydraulics/tiller/function</input>
+			<input>hydraulics/tiller/cmd-deg</input>
 			<rate_limit>70</rate_limit>
 			<output>fcs/steer-pos-deg[0]</output>
 		</actuator>
@@ -607,7 +623,7 @@
 		<switch name="fcs/pushback-steer-deg">
 			<default value="0"/>
 			<test value="fcs/steer-deg">
-				/sim/model/pushback/position-norm gt 0.999
+				/sim/model/autopush/connected eq 1
 			</test>
 		</switch>
 	

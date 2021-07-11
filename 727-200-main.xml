@@ -22,12 +22,38 @@
 		</hud>
 		
 		<model>
-			<pushback>
-				<kp type="double">5000</kp>
-				<ki type="double">200</ki>
-				<kd type="double">500</kd>
+			<autopush>
+				<available type="int">1</available>
+				<chocks alias="/services/chocks/enable"/>
+				<connected type="bool">0</connected>
+				<debug type="bool">0</debug>
+				<driver>
+					<F_V type="float">8.0</F_V>
+					<K_psi type="float">0.03</K_psi>
+					<F_psi type="float">1.0</F_psi>
+					<K_psidot type="float">0.03</K_psidot>
+					<F_psidot type="float">1.0</F_psidot>
+				</driver>
+				<enabled type="int"/>
+				<F_d type="float">0.0</F_d>
+				<F_i type="float">0.1</F_i>
+				<F_p type="float">0.15</F_p>
+				<K_d type="float">0.0</K_d>
+				<K_i type="float">0.25</K_i>
+				<K_p type="float">0.5</K_p>
+				<min-turn-radius-m type="float">15</min-turn-radius-m>
+				<pitch-deg type="float">0.0</pitch-deg>
 				<position-norm type="double">0</position-norm>
-			</pushback>
+				<route>
+					<show type="bool"/>
+					<show-wingtip type="bool"/>
+				</route>
+				<steer-cmd-norm alias="/fdm/jsbsim/hydraulics/tiller/autopush-cmd"/>
+				<stopping-distance-m type="float">5.0</stopping-distance-m>
+				<target-speed-km_h type="float">0.0</target-speed-km_h>
+				<yaw alias="/fdm/jsbsim/fcs/steer-deg"/>
+				<yaw-mult type="float">1.0</yaw-mult>
+			</autopush>
 		</model>
 		
 		<sound>
@@ -145,7 +171,7 @@
 						<label>Pushback</label>
 						<binding>
 							<command>dialog-show</command>
-							<dialog-name>pushback</dialog-name>
+							<dialog-name>autopush</dialog-name>
 						</binding>
 					</item>
 					<item>
@@ -262,7 +288,7 @@
 		
 		<flight-recorder include="Systems/flight-recorder.xml"/>
 		
-		<gui n="0" include="Systems/it-gui.xml"/>
+		<gui n="0" include="gui/it-gui.xml"/>
 		
 		<current-view>
 			<z-offset-default type="float">80.0</z-offset-default>
@@ -377,7 +403,19 @@
 			<state type="int">0</state>
 		</engine>
 	</engines>
-
+	
+	<fdm n="0">
+		<jsbsim n="0">
+			<external_reactions n="0">
+				<tractor>
+					<magnitude alias="/sim/model/autopush/force-lbf"/>
+					<x alias="/sim/model/autopush/force-x"/>
+					<y alias="/sim/model/autopush/force-y"/>
+				</tractor>
+			</external_reactions>
+		</jsbsim>
+	</fdm>
+	
 	<instrumentation>
 		<path>Aircraft/727-200/Systems/instrumentation.xml</path>
 	</instrumentation>
@@ -750,6 +788,18 @@
 			<file>Aircraft/727-200/Nasal/autopilot-v-fd.nas</file>
 			<file>Aircraft/727-200/Nasal/autopilot-v-interface.nas</file>
 		</autopilot_v>
+		<autopush>
+			<file>Aircraft/MD-80/Nasal/Autopush/autopush.nas</file>
+		</autopush>
+		<autopush_driver>
+			<file>Aircraft/MD-80/Nasal/Autopush/driver.nas</file>
+		</autopush_driver>
+		<dynarr>
+			<file>Aircraft/MD-80/Nasal/Autopush/dynarr.nas</file>
+		</dynarr>
+		<autopush_route>
+			<file>Aircraft/MD-80/Nasal/Autopush/route.nas</file>
+		</autopush_route>
 	</nasal>
 
 </PropertyList>
