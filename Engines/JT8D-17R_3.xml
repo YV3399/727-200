@@ -9,7 +9,7 @@
 <turbine_engine name="JT8D-17R">
 	
 	<milthrust>   17400.0 </milthrust>
-	<tsfc>            0.5 </tsfc>
+	<tsfc>           0.65 </tsfc>
 	<bleed>          0.03 </bleed>
 	<idlen1>         33.4 </idlen1>
 	<idlen2>         57.5 </idlen2>
