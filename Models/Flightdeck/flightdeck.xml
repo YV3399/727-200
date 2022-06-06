@@ -62,9 +62,9 @@
 	<!-- pilot side -->
 
 	
-	<!-- Pneumatic Parking Brake -->
+	<!-- Pneumatic Brake -->
 	<model>
-		<path>Aircraft/727-200/Models/Instruments/ParkingBrake/pneubrake.xml</path>
+		<path>Aircraft/727-200/Models/Instruments/PneuBrake/pneubrake.xml</path>
 		<offsets>
 			<x-m>  15.35650</x-m>
 			<y-m>  -0.01000</y-m>

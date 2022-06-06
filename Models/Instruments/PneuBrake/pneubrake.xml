@@ -58,7 +58,7 @@
     <animation>
         <type>rotate</type>
         <object-name>brake</object-name>
-        <property>controls/gear/brake-parking</property>
+        <property>controls/gear/brake-pneumatic</property>
         <factor>-90</factor>
         <axis>
             <x> 1.0</x>
@@ -70,20 +70,6 @@
             <y-m>-0.213</y-m>
             <z-m>0.976</z-m>
         </center>
-    </animation>
-
-    <animation>
-      <type>pick</type>
-      <object-name>brake</object-name>
-      <visible>true</visible>
-      <action>
-        <button>0</button>
-        <repeatable>false</repeatable>
-        <binding>
-          <command>property-toggle</command>
-          <property>controls/gear/brake-parking</property>  
-        </binding>
-      </action>
     </animation>
 
 </PropertyList>
