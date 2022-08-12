@@ -154497,7 +154497,7 @@ name "winglet.left"
 loc -6.70451 -6.45934 -8.57413
 data 21
 winglet.left.mesh.000
-texture "/Applications/FlightGear.app/Contents/Resources/data/Aircraft/MD-11/Models/MD-11.png"
+texture "wing.png"
 crease 45.000000
 numvert 215
 11.3485 6.19618 24.9499
@@ -156540,7 +156540,7 @@ name "winglet.right"
 loc -6.68153 -6.44839 8.57475
 data 21
 winglet.left.mesh.004
-texture "/Applications/FlightGear.app/Contents/Resources/data/Aircraft/MD-11/Models/MD-11.png"
+texture "wing.png"
 crease 45.000000
 numvert 219
 13.6078 6.12631 -25.0352
