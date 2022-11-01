@@ -202,7 +202,7 @@
 						</binding>
 					</item>
 					<item>
-						<label>Ground service</label>
+						<label>Ground services</label>
 						<binding>
 							<command>nasal</command>
 							<script>
