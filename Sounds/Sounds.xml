@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- 727 Sounds -->
-<!-- Swamp, Octal450 -->
+<!-- Swamp, Octal450, YV3399 -->
 
 <PropertyList>
 
@@ -9,6 +9,161 @@
 
   <fx>
   
+<pushback>
+			<name>Pushback_outside</name>
+			<mode>looped</mode>
+			<path>Aircraft/727-200/Sounds/pushback.wav</path>
+			<condition>
+				<and>
+					<not>
+						<property>/sim/current-view/internal</property>
+					</not>
+					<property>/sim/model/autopush/enabled</property>
+				</and>
+			</condition>
+			<volume>0.15</volume>
+		</pushback>
+
+		<pushback>
+			<name>Pushback_inside</name>
+			<mode>looped</mode>
+			<path>Aircraft/727-200/Sounds/pushback.wav</path>
+			<condition>
+				<and>
+					<property>/sim/current-view/internal</property>	
+					<property>/sim/model/autopush/enabled</property>
+	   		 	</and>
+			</condition>
+			<volume>0.05</volume>
+		</pushback>
+
+			<!-- Ground Services-->
+
+		<fuelpump>
+			<name>fuel truck pump transfer</name>
+			<path>/Aircraft/727-200/Sounds/electricalengine.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<less-than>	
+					<property>/velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>/services/fuel-truck/transfer</property>
+				<value>1</value>
+			</volume>
+        <!--volume>
+            <property>sim/sound/Ovolume</property>
+        </volume-->
+        <position>
+        	<x-m>0.25</x-m>
+        	<y-m>-1.0</y-m>
+        	<z-m>1.0</z-m>
+        </position>
+        <reference-dist>60.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </fuelpump>
+
+    <fueltruck>
+    	<name>fuel truck pump clean</name>
+    	<path>/Aircraft/727-200/Sounds/electricalengine.wav</path>
+    	<mode>looped</mode>
+    	<condition>
+    		<less-than>	
+    			<property>/velocities/groundspeed-kt</property>
+    			<value>1</value>
+    		</less-than>
+    	</condition>
+    	<volume>
+    		<property>/services/fuel-truck/clean</property>
+    		<value>1</value>
+    	</volume>
+        <!--volume>
+            <property>sim/sound/Ovolume</property>
+        </volume-->
+        <position>
+        	<x-m>0.25</x-m>
+        	<y-m>-1.0</y-m>
+        	<z-m>1.0</z-m>
+        </position>
+        <reference-dist>60.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </fueltruck>
+
+    <deice>
+    	<name>de ice truck operation</name>
+    	<path>/Aircraft/727-200/Sounds/electricalengine.wav</path>
+    	<mode>looped</mode>
+    	<condition>
+    		<less-than>	
+    			<property>/velocities/groundspeed-kt</property>
+    			<value>1</value>
+    		</less-than>
+    	</condition>
+    	<volume>
+    		<property>/services/deicing_truck/de-ice</property>
+    		<value>1</value>
+    	</volume>
+        <!--volume>
+            <property>sim/sound/Ovolume</property>
+        </volume-->
+        <position>
+        	<x-m>-15</x-m>
+        	<y-m>9.5</y-m>
+        	<z-m>-3.45</z-m>
+        </position>
+        <reference-dist>60.0</reference-dist>
+        <max-dist>50.0</max-dist>
+    </deice>
+  
+<!-- GPWS -->
+
+    <alt2500>
+        <name>alt2500</name>
+        <mode>once</mode>
+        <type>avionics</type>		
+        <path>Aircraft/727-200/Sounds/-2500.wav</path>
+        <condition>
+			<less-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>2520</value>
+			</less-than>
+			<greater-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>2480</value>
+			</greater-than>	
+			<less-than>
+				<property>/velocities/vertical-speed-fps</property>
+				<value>0</value>
+			</less-than>
+		</condition>
+    	</alt2500>
+
+    <rain>
+    	<name>rain</name>
+    	<mode>looped</mode>
+    	<path>Aircraft/727-200/Sounds/rain.wav</path>
+    	<condition>
+    		<greater-than>
+    			<property>/environment/rain-norm</property>
+    			<value>0.2</value>
+    		</greater-than>
+    	</condition>
+    	<volume>
+    		<property>/environment/rain-norm</property>
+    		<factor>1.00</factor>
+    		<offset>0.00</offset>
+    		<min>0.4</min>
+    		<max>0.9</max>
+    	</volume>
+    	<pitch>
+    		<property>/velocities/airspeed-kt</property>
+    		<factor>0.001</factor>
+    		<offset>1.0</offset>
+    	</pitch>
+    </rain>
+
 	<apoff>
 		<name>apoff</name>
 		<path>/Aircraft/727-200/Sounds/apoff.wav</path>
@@ -729,9 +884,7 @@
                 <outer-gain>0.3</outer-gain>
         </orientation>           
     </engine>
-    
 
-    
     <engine>
       <name>left roar</name>
       <path>Aircraft/727-200/Sounds/eng/roar.wav</path>
@@ -963,14 +1116,14 @@
         </crash>
 
 
-                <overspeed>
+        <overspeed>
 			<name>Overspeed warning</name>
 			<path>Aircraft/727-200/Sounds/overspeed.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<greater-than>
 					<property>velocities/airspeed-kt</property>
-					<value>345</value>
+					<value>330</value>
 				</greater-than>
 			</condition>
 			<volume>
