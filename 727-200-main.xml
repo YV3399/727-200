@@ -63,7 +63,7 @@
 		</sound>
 		
 		<startup>
-			<splash-texture>Aircraft/727-200/Splash/SplashOld.png</splash-texture>
+			<splash-texture>Aircraft/727-200/Splash/splash1.png</splash-texture>
 		</startup>
 		
 		<previews>
