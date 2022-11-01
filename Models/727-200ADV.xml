@@ -104,6 +104,20 @@
 		<object-name>wing.glass.right</object-name>
 	</animation>
 
+  <effect>
+    <inherits-from>Effects/glass</inherits-from>
+    <object-name>Windows.mainFrame</object-name>
+    <object-name>Windows.doors</object-name>
+	<object-name>Windows.Emergency</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>Windows.mainFrame</object-name>
+    <object-name>Windows.doors</object-name>
+	<object-name>Windows.Emergency</object-name>
+  </effect>
+
 	<!-- Livery System -->
 	<nasal>
 		<load>
