@@ -96,6 +96,14 @@
 		<texture>Liveries-ADV/BOE-eng.png</texture>
 	</animation>
 	
+    <animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>chrome1.png</texture>
+		<object-name>wing.glass.left</object-name>
+		<object-name>wing.glass.right</object-name>
+	</animation>
+
 	<!-- Livery System -->
 	<nasal>
 		<load>
@@ -1567,7 +1575,7 @@
 		</offsets>
 	</model>
 
-  <!-- New Lights By YV3399 -->
+   <!-- New Lights By YV3399 -->
 
 <!-- Beacon -->
 
@@ -1615,37 +1623,36 @@
   <path>Aircraft/727-200/Models/Lights/rednav.xml</path>
    <name>Redlight</name>
   <offsets>
-   <x-m>4.5</x-m>
-   <y-m>-16.611</y-m>
-   <z-m>-0.26</z-m>
+   <x-m>4.66</x-m>
+   <y-m>-16.605</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
  </model>
 <model>
   <path>Aircraft/727-200/Models/Lights/ALS/red-navlight.xml</path>
   <name>Redlight.ALS</name>     
   <offsets>
-   <x-m>4.5</x-m>
-   <y-m>-16.611</y-m>
-   <z-m>-0.26</z-m>
+   <x-m>4.66</x-m>
+   <y-m>-16.605</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
  </model>
-
 <model>
   <path>Aircraft/727-200/Models/Lights/greennav.xml</path>
   <name>Greenlight</name>
   <offsets>
-  <x-m>4.5</x-m>
-   <y-m>16.611</y-m>
-   <z-m>-0.26</z-m>
+  <x-m>4.66</x-m>
+   <y-m>16.605</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
  </model>
 <model>
   <path>Aircraft/727-200/Models/Lights/ALS/green-navlight.xml</path>
   <name>Greenlight.ALS</name>     
  <offsets>
-  <x-m>4.5</x-m>
-   <y-m>16.611</y-m>
-   <z-m>-0.26</z-m>
+  <x-m>4.66</x-m>
+   <y-m>16.605</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
 </model>
 
@@ -1655,18 +1662,18 @@
   <path>Aircraft/727-200/Models/Lights/strobe.xml</path>
   <name>strobe.right</name>  
   <offsets>
-   <x-m>4.5</x-m>
-   <y-m>-16.911</y-m>
-   <z-m>-0.15</z-m>
+   <x-m>4.66</x-m>
+   <y-m>-16.595</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
  </model>
 <model>
   <path>Aircraft/727-200/Models/Lights/ALS/right-strobe.xml</path>
   <name>strobe.right.ALS</name>     
  <offsets>
-   <x-m>4.5</x-m>
-   <y-m>-16.911</y-m>
-   <z-m>-0.15</z-m>
+   <x-m>4.66</x-m>
+   <y-m>-16.595</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
 </model>
 
@@ -1674,18 +1681,18 @@
   <path>Aircraft/727-200/Models/Lights/strobe.xml</path>
    <name>strobe.left</name>   
   <offsets>
-   <x-m>4.5</x-m>
-   <y-m>16.611</y-m>
-   <z-m>-0.15</z-m>
+   <x-m>4.66</x-m>
+   <y-m>16.595</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
  </model>
 <model>
   <path>Aircraft/727-200/Models/Lights/ALS/left-strobe.xml</path>
   <name>strobe.left.ALS</name>     
   <offsets>
-   <x-m>4.5</x-m>
-   <y-m>16.611</y-m>
-   <z-m>-0.15</z-m>
+   <x-m>4.66</x-m>
+   <y-m>16.595</y-m>
+   <z-m>-0.33</z-m>
   </offsets>
 </model>
 
@@ -1727,6 +1734,20 @@
   </offsets>
 </model>
  
+<animation>
+		<name>logo-lights</name>
+		<type>material</type>
+		<object-name>Fuselage.003</object-name>
+		<object-name>rudder_upper</object-name>
+		<object-name>rudder_lower</object-name>
+		<emission>
+			<red>0.25</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+			<factor-prop>controls/lighting/wing-lights</factor-prop>
+		</emission>
+	</animation>
+
 <!-- Landing Lights -->
 
 <model>
