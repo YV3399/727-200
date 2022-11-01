@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Policia Federal</name>
+				<texture>Liveries-ADV/NPF.png</texture>
+			</livery>
+			<eng>
+				<texture>Liveries-ADV/NPF-eng.png</texture>
+			</eng>
+		</model>
+	</sim>
+</PropertyList>

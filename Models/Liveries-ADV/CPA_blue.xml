@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Copa Airlines</name>
+				<texture>Liveries-ADV/CPA_blue.png</texture>
+			</livery>
+			<eng>
+				<texture>Liveries-ADV/CPA_blue-eng.png</texture>
+			</eng>
+		</model>
+	</sim>
+</PropertyList>

@@ -5,7 +5,7 @@
 <PropertyList>
 
 	<sim>
-		<author>Josh Davidson (Octal450)</author>
+		<author>Josh Davidson (Octal450), Gabriel Hernandez (YV3399)</author>
 		
 		<status>Pre V1.0</status>
 		
@@ -198,6 +198,16 @@
 							<script>
 							var fctl = gui.Dialog.new("sim/gui/dialogs/fctl/dialog", "Aircraft/727-200/Systems/fctl-dlg.xml");
 							fctl.open();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Ground service</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							var lights = gui.Dialog.new("sim/gui/dialogs/groundservice/dialog", "Aircraft/727-200/Systems/groundservices.xml");
+							lights.open();
 							</script>
 						</binding>
 					</item>
@@ -781,6 +791,7 @@
 			<!--file>Aircraft/727-200/Nasal/electrical.nas</file-->
 			<file>Aircraft/727-200/Nasal/hydraulics.nas</file>
 			<file>Aircraft/727-200/Nasal/heat.nas</file>
+			<file>Aircraft/727-200/Nasal/ground-services.nas</file>
 			<!--file>Aircraft/727-200/Nasal/engines.nas</file-->
 		</systems>
 		<autopilot_v>

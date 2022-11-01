@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Alegro</name>
+				<texture>Liveries-ADV/GRO.png</texture>
+			</livery>
+			<eng>
+				<texture>Liveries-ADV/GRO-eng.png</texture>
+			</eng>
+		</model>
+	</sim>
+</PropertyList>

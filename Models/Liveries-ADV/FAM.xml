@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Fuerza Aerea Mexicana</name>
+				<texture>Liveries-ADV/FAM.png</texture>
+			</livery>
+			<eng>
+				<texture>Liveries-ADV/FAM-eng.png</texture>
+			</eng>
+		</model>
+	</sim>
+</PropertyList>

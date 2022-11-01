@@ -148,8 +148,12 @@
 		<object-name>leftelevator</object-name>
 		<object-name>rightelevator</object-name>
 		<!-- engines -->
-		<object-name>Engines</object-name>
+		<object-name>Circle</object-name>
+		<object-name>Circle.001</object-name>
+		<object-name>Fuselage.004</object-name>
 		<!-- Wings -->
+		<object-name>winglet.left</object-name>
+		<object-name>winglet.right</object-name>
 		<!-- main plane -->
 		<object-name>Plane.005</object-name>
 		<!-- Left -->
@@ -1497,7 +1501,7 @@
 		</center>
 	</animation>
 
-<!-- New Effects By YV3399 -->
+<!-- Effects By YV3399 -->
 
 <!-- Tyre Smoke -->
 
@@ -1573,7 +1577,7 @@
 		</offsets>
 	</model>
 
-  <!-- New Lights By YV3399 -->
+  <!-- Lights By YV3399 -->
 
 <!-- Beacon -->
 
@@ -1772,6 +1776,8 @@
    </offsets>
 </model>
 
+<!-- Logo Lights -->
+
 <animation>
 		<name>logo-lights</name>
 		<type>material</type>
@@ -1865,4 +1871,144 @@
   </emission>
 </animation>
 	
+<!-- Services by Gabriel Hernandez(YV399) -->
+
+<model>
+  <path>Aircraft/727-200/Models/Services/Services.xml</path>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </offsets>
+</model> 
+
+<!-- De-icing Truck -->
+
+<model>
+  <name>de-ice-truck</name>
+  <path>Aircraft/727-200/Models/Services/De-Icing/volvo_deicing_truck.xml</path>
+  <condition>
+    <and>   
+      <equals>
+       <property>services/deicing_truck/enable</property>
+       <value>1</value>
+     </equals>
+     <less-than>  
+      <property>velocities/groundspeed-kt</property>
+      <value>1</value>
+    </less-than>
+  </and>
+</condition>
+<offsets>
+  <x-m>-13</x-m><!--original -15-->
+  <y-m>7</y-m>
+  <z-m>-2.48</z-m>
+  <heading-deg>160</heading-deg>
+</offsets>
+</model>
+
+<!-- Baggage Truck -->
+
+<model>
+  <name>baggage-truck</name>
+  <path>Aircraft/727-200/Models/Services/Baggage/cargo_ramp.xml</path>
+  <condition>
+    <and>
+      <equals>
+       <property>services/baggage/enable</property>
+       <value>1</value>
+     </equals>
+     <less-than>  
+      <property>velocities/groundspeed-kt</property>
+      <value>1</value>
+    </less-than>
+  </and>
+</condition>
+<offsets>
+  <x-m>-7.2</x-m>
+  <y-m>0</y-m>
+  <z-m>0.95</z-m>
+  <heading-deg>0</heading-deg>
+</offsets>
+</model>
+
+<!-- External Power -->
+
+<model>
+  <name>ext-pwr</name>
+  <path>Aircraft/727-200/Models/Services/External-Power/ext-pwr-box.ac</path>
+  <condition>
+    <and>
+      <equals>
+       <property>services/ext-pwr/enable</property>
+       <value>1</value>
+     </equals>
+     <less-than>  
+      <property>velocities/groundspeed-kt</property>
+      <value>1</value>
+    </less-than>
+  </and>
+</condition>
+<offsets>
+  <x-m>-17</x-m>
+  <y-m>2</y-m>
+  <z-m>2.16</z-m>
+  <heading-deg>0</heading-deg>
+</offsets>
+</model>
+
+<model>
+ <name>Bus</name>
+ <path>Aircraft/727-200/Models/Services/Bus/bus.xml</path>
+ <condition>
+   <property>controls/switches/bus</property>
+   <less-than>
+    <property>velocities/groundspeed-kt</property>
+    <value>1</value>
+  </less-than>
+</condition>
+<offsets>
+  <x-m>6</x-m>
+  <y-m>-10</y-m>
+  <z-m>-0.2</z-m>
+  <pitch-deg>-1</pitch-deg>
+  <heading-deg>-270</heading-deg>
+</offsets>
+</model>
+
+<!-- Fuel Truck -->
+	
+	<model>
+		<name>fuel-truck</name>
+		<path>Aircraft/727-200/Models/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
+		<condition>
+			<equals>
+				<property>services/fuel-truck/enable</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fuel_pipe</object-name>
+		<condition>
+			<equals>
+				<property>services/fuel-truck/connect</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fuel_pipe_disconnected</object-name>
+		<condition>
+			<equals>
+				<property>services/fuel-truck/connect</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
 </PropertyList>
