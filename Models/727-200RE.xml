@@ -165,9 +165,6 @@
 		<object-name>Circle</object-name>
 		<object-name>Circle.001</object-name>
 		<object-name>Fuselage.004</object-name>
-		<!-- Wings -->
-		<object-name>winglet.left</object-name>
-		<object-name>winglet.right</object-name>
 		<!-- main plane -->
 		<object-name>Plane.005</object-name>
 		<!-- Left -->
