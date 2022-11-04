@@ -16,6 +16,8 @@ setprop("/controls/lighting/beacon",0);
 setprop("/controls/lighting/landing-lights",0);
 setprop("/controls/lighting/logo-lights",0);
 setprop("/controls/lighting/nav-lights",0);
+setprop("/controls/lighting/taxi-lights",0);
+
 });
 
 setlistener("controls/lighting/landing-lights[0]", func
@@ -31,6 +33,16 @@ setlistener("controls/lighting/landing-lights[0]", func
  setlistener("controls/lighting/landing-lights[2]", func
  {
  var landr = getprop("controls/lighting/landing-lights[2]");
+ if (landr == 1) {
+ setprop("sim/rendering/als-secondary-lights/use-alt-landing-light",1);
+ } else {
+ setprop("sim/rendering/als-secondary-lights/use-alt-landing-light",0);
+ }
+ });
+
+ setlistener("controls/lighting/taxi-lights[0]", func
+ {
+ var landr = getprop("controls/lighting/taxi-lights[0]");
  if (landr == 1) {
  setprop("sim/rendering/als-secondary-lights/use-alt-landing-light",1);
  } else {
