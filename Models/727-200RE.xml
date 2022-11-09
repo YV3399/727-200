@@ -89,14 +89,24 @@
 		<texture>Liveries-RE/BOE.png</texture>
 	</animation>
 	
-    <animation>
+   <animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>chrome1.png</texture>
 		<object-name>wing.glass.left</object-name>
 		<object-name>wing.glass.right</object-name>
-	</animation>
-
+		<object-name>Sphere.004</object-name>
+		<object-name>Sphere</object-name>
+		<object-name>Sphere.001</object-name>
+		<object-name>Sphere.002</object-name>
+		<object-name>Sphere.003</object-name>
+		<object-name>glass.light</object-name>
+		<object-name>glass.light1</object-name>
+        <object-name>glass.light2</object-name>
+        <object-name>glass.light3</object-name>
+        <object-name>glass.light4</object-name>
+    </animation>
+	
 <effect>
     <inherits-from>Effects/glass</inherits-from>
     <object-name>Windows.mainFrame</object-name>
