@@ -1749,10 +1749,24 @@
   </offsets>
 </model>
  
-<!-- Landing Lights -->
+<animation>
+		<name>logo-lights</name>
+		<type>material</type>
+		<object-name>Fuselage.003</object-name>
+		<object-name>rudder_upper</object-name>
+		<object-name>rudder_lower</object-name>
+		<emission>
+			<red>0.25</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+			<factor-prop>controls/lighting/wing-lights</factor-prop>
+		</emission>
+	</animation>
+
+<!-- runway-turnoff LEFT -->
 
 <model>
-	<path>Aircraft/727-200/Models/Lights/landing-stbd.xml</path>
+	<path>Aircraft/727-200/Models/Lights/runway-light.xml</path>
 	 <name>landing.LW</name> 
 	<offsets>
 		<x-m>-5.93</x-m>
@@ -1761,7 +1775,7 @@
 	</offsets>
 </model>
 <model>
-  <path>Aircraft/727-200/Models/Lights/ALS/landinglightL.xml</path>
+  <path>Aircraft/727-200/Models/Lights/ALS/runway-light-als.xml</path>
   <name>landing.LW.ALS</name>
      <offsets>
 	<x-m>-5.93</x-m>
@@ -1770,8 +1784,10 @@
      </offsets>
 </model>
 
+<!-- runway-turnoff RIGHT -->
+
 <model>
-	<path>Aircraft/727-200/Models/Lights/landing-stbd.xml</path>
+	<path>Aircraft/727-200/Models/Lights/runway-lightR.xml</path>
 	 <name>landing.RW</name>
 	<offsets>
 		<x-m>-5.93</x-m>
@@ -1780,13 +1796,116 @@
 	</offsets>
 </model>
 <model>
-  <path>Aircraft/727-200/Models/Lights/ALS/landinglightR.xml</path>
+  <path>Aircraft/727-200/Models/Lights/ALS/runway-light-alsR.xml</path>
   <name>landing.RW.ALS</name>
   <offsets>
 	<x-m>-5.93</x-m>
 	<y-m>2.14</y-m>
 	<z-m>-0.51</z-m>        
    </offsets>
+</model>
+
+
+<!-- Landing Lights WING LEFT -->
+
+<model>
+	<path>Aircraft/727-200/Models/Lights/landing-stbd.xml</path>
+	 <name>landing.LW</name> 
+	<offsets>
+		<x-m>-2.58</x-m>
+		<y-m>-6.22</y-m>
+		<z-m>-0.68</z-m>      
+	</offsets>
+</model>
+<model>
+  <path>Aircraft/727-200/Models/Lights/ALS/landinglightL.xml</path>
+  <name>landing.LW.ALS</name>
+     <offsets>
+	<x-m>-2.58</x-m>
+	<y-m>-6.22</y-m>
+	<z-m>-0.68</z-m>      
+     </offsets>
+</model>
+
+<!-- Landing Lights WING RIGHT -->
+
+<model>
+	<path>Aircraft/727-200/Models/Lights/landing-stbd.xml</path>
+	 <name>landing.LW</name> 
+	<offsets>
+		<x-m>-2.58</x-m>
+		<y-m>6.22</y-m>
+		<z-m>-0.64</z-m>      
+	</offsets>
+</model>
+<model>
+  <path>Aircraft/727-200/Models/Lights/ALS/landinglightL.xml</path>
+  <name>landing.LW.ALS</name>
+     <offsets>
+	<x-m>-2.58</x-m>
+	<y-m>6.22</y-m>
+	<z-m>-0.64</z-m>      
+     </offsets>
+</model>
+
+
+<!--Taxi Light-->
+
+<model>
+  <path>Aircraft/727-200/Models/lights/taxilight.xml</path>
+  <name>TaxiLight</name>
+  <offsets>
+    <x-m>-19.78</x-m>
+    <y-m>0.10</y-m>
+    <z-m>-1.70</z-m>      
+  </offsets>
+</model>
+<model>
+  <path>Aircraft/727-200/Models/lights/ALS/taxilight.xml</path>
+  <name>TaxiLight.ALS</name>
+  <offsets>
+    <x-m>-19.78</x-m>
+    <y-m>0.10</y-m>
+    <z-m>-1.70</z-m>      
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/727-200/Models/lights/taxilight.xml</path>
+  <name>TaxiLight</name>
+  <offsets>
+    <x-m>-19.95</x-m>
+    <y-m>-0.10</y-m>
+    <z-m>-1.70</z-m>      
+  </offsets>
+</model>
+<model>
+  <path>Aircraft/727-200/Models/lights/ALS/taxilight.xml</path>
+  <name>TaxiLight.ALS</name>
+  <offsets>
+    <x-m>-19.95</x-m>
+    <y-m>-0.10</y-m>
+    <z-m>-1.70</z-m>      
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/727-200/Models/lights/taxilight.xml</path>
+  <name>TaxiLight</name>
+  <offsets>
+    <x-m>-19.95</x-m>
+    <y-m>0.00</y-m>
+    <z-m>-1.98</z-m>      
+  </offsets>
+</model>
+<model>
+  <path>Aircraft/727-200/Models/lights/ALS/taxilight.xml</path>
+  <name>TaxiLight.ALS</name>
+  <offsets>
+    <x-m>-19.95</x-m>
+    <y-m>0.00</y-m>
+    <z-m>-1.98</z-m>      
+  </offsets>
 </model>
 
 <!-- Logo Lights -->
