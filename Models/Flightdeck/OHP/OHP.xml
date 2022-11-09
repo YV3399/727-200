@@ -660,7 +660,7 @@
     <animation>
         <type>knob</type>
         <object-name>ohp_knob</object-name>
-        <property>controls/lighting/interior/ohp</property>
+        <property>controls/lighting/panel-light</property>
         <factor>180</factor>
         <center>
             <x-m>-0.36224</x-m>
@@ -673,7 +673,7 @@
         <action>
             <binding>
                 <command>property-adjust</command>
-        <property>controls/lighting/interior/ohp</property>
+        <property>controls/lighting/panel-light</property>
                 <factor>-0.05</factor>
                 <min>0</min>
                 <max>1</max>        

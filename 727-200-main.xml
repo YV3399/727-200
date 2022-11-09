@@ -175,16 +175,6 @@
 						</binding>
 					</item>
 					<item>
-						<label>Lights</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/727-200/Systems/lights-dlg.xml");
-							lights.open();
-							</script>
-						</binding>
-					</item>
-					<item>
 						<label>Select Livery</label>
 						<binding>
 							<command>nasal</command>
