@@ -556,15 +556,24 @@
 				<category-13 type="int">7</category-13>
 				<category-14 type="int">0</category-14>
 			</configuration-module>
+			<input-feeders>
+				<discretes>
+					<!-- disable the built-in input feeder -->
+					<landing-flaps type="bool">false</landing-flaps>
+				</discretes>
+			</input-feeders>
 			<inputs>
 				<arinc429>
 					<decision-height-ncd type="bool">0</decision-height-ncd>
 					<decision-height type="double">250</decision-height>
 				</arinc429>
+				<discretes>
+					<momentary-flap-all-override type="bool">0</momentary-flap-all-override>
+				</discretes>
 			</inputs>
 			<speaker>
 				<max-dist type="double">2</max-dist>
-				<reference-dist type="double">1</reference-dist>
+				<reference-dist type="double">5</reference-dist>
 				<volume type="double">2</volume>
 			</speaker>
 			<voice>
