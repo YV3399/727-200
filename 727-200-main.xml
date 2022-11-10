@@ -289,7 +289,8 @@
       <int n="4" alias="/systems/electrical/outputs/strobe"/>
       <int n="5" alias="/systems/electrical/outputs/nav-lights"/>
 	  <int n="6" alias="/systems/electrical/outputs/wing-lights"/>
-			</generic>
+	  <int n="7" alias="/systems/electrical/outputs/runway-turnoff-left"/>
+		</generic>
 		</multiplay>
 		
 		<flight-recorder include="Systems/flight-recorder.xml"/>
