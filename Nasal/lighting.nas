@@ -14,7 +14,7 @@ beacon_switch = props.globals.getNode("controls/lighting/beacon", 1);
 setprop("/controls/lighting/strobe",0);
 setprop("/controls/lighting/beacon",0);
 setprop("/controls/lighting/landing-lights",0);
-setprop("/controls/lighting/logo-lights",0);
+setprop("/controls/lighting/wing-lights",0);
 setprop("/controls/lighting/nav-lights",0);
 setprop("/controls/lighting/taxi-lights",0);
 
